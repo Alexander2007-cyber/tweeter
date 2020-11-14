@@ -258,7 +258,8 @@ def postpreference(request, postid, userpreference):
                                 context= {'eachpost': eachpost,
                                   'postid': postid}
 
-                                return redirect('blog-home')
+                                return redirect('user/<str:username>')
+                                #return redirect('blog-home')
 
                         elif valueobj == userpreference:
                                 obj.delete()

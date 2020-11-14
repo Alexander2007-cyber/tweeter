@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
         <div class="col-12 col-md-3 pr-4 dont-move">
-            <a href="/"> <h2><img class="img-fluid" width="60" src="{% static 'blog/logo.png' %}">BlogRoom</h2></a><br>
+            <a href="/"> <h2><img class="img-fluid" width="60" style="margin-right: 15px;" src="{% static 'blog/logo1.png' %}">Social Media</h2></a><br>
             <div class="profile-section">
             <h3 class="white-important p-2">
                 Profile
@@ -93,7 +93,7 @@
                 {% if user_profile is None %}
                 <div style="margin-left: auto; margin-right:auto">
                     <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'post-create' %}">
-                        Tweet
+                        Post
                     </a>
                 </div>
                 {% endif %}
@@ -120,7 +120,7 @@
             <div class="full-width row">
                 <div class="col-6">
                     <h3 class="white-important mb-3">
-                        Tweets
+                        Posts
                     </h3>
                 </div>
                  <div class="col-6 no-padding">
@@ -244,7 +244,7 @@
             <form action="{% url 'search' %}" method="post">{% csrf_token %}
                 <div class="search-container">
                     <div class="search">
-                    <input required name="search" type="text" id="zip-code-input" placeholder="Search Twitter">
+                    <input required name="search" type="text" id="zip-code-input" placeholder="Search">
                     <button type="submit" style="border:0; background: transparent;"><i class="fa fa-search"></i> </button> </a>
                 </form>
               </div>
@@ -285,13 +285,14 @@
 
                 </article>
                 {% endif %}
+                <div class="container1" style="margin-top: 145px;">
                 <p><a href="">Terms</a>,
 <a href="">Privacy policy</a>,
 <a href="">Cookies</a>,
 <a href="">Ads info</a>,
 <a href="">More</a>
-© 2020 Twitter, Inc.</p>
-
+© 2020 Alexander</p>
+</div>
         </div>
     </div>
 {% endblock content %}
